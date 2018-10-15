@@ -1,49 +1,5 @@
-feign:
-  hystrix:
-    enabled: true
-hystrix:
-    command:
-      default:
-        execution:
-          timeout:
-            enabled: true
-          isolation:
-            thread:
-              timeoutInMilliseconds: 60000
+
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:9999/eureka/ # 指定服务注册中心的地址
-spring:
-    data:
-      mongodb:
-        uri: mongodb://128.196.230.31:27017/gpc
-    redis:
-      port: 6379
-      host: 128.196.230.31
-      password: ccb_jsyh
-      pool:
-        name: jsyh
-        max-active: 100
-        max-idle: 5
-        max-wait: 600000
-db:
-  mysql:
-    jdbcUrl: jdbc:mysql://128.196.230.31:3306/ccb?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-    username: ccb
-    password: ccb
-    driverClassName: com.mysql.jdbc.Driver
-    connectionTestQuery: SELECT 1
-    connectionTimeoutMs: 30000
-    idleTimeoutMs: 600000
-    maxLifetimeMs: 1800000
-    maxPoolSize: 20
-    minIdle: 1
-    transactionTimeoutS: 30
-page:
-  defaultsize: 20
-es:
-  cluster_name: yonyou
-  cluster_nodes: 128.196.230.29:9301
-redis:
-  poolUrl: direct://128.196.230.31:6379?poolSize=20&poolName=jsyh&password=ccb_jsyh
+      defaultZone: http://localhost:8000/eureka/ # 指定服务注册中心的地址
