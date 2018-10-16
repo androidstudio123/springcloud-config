@@ -87,3 +87,5 @@ endOrder: false
 #生成二维码地址
 barcode:
   url: http://127.0.0.1:8550/api/yonyou/barcode/generate
+scheduled:
+    enable: true
