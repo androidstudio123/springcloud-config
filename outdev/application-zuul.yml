@@ -91,13 +91,6 @@ hystrix:
           thread:
             timeoutInMilliseconds: 600000
 
-ribbon:
-  ReadTimeout: 600000
-  ConnectTimeout: 600000
-  MaxAutoRetries: 0
-  MaxAutoRetriesNextServer: 1
-  eureka:
-    enabled: true
 feign:
   compression:
     request:

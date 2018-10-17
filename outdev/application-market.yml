@@ -5,44 +5,6 @@ server:
       url: http://127.0.0.1:8888
       name: springCloudApp
       profile: ${config.profile:dev}
-#MYSQL
-db:
-  mysql:
-    jdbcUrl: jdbc:mysql://39.104.87.29:3306/ccb?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true
-    username: ccb
-    password: ccb
-    driverClassName: com.mysql.jdbc.Driver
-    connectionTestQuery: SELECT 1
-    connectionTimeoutMs: 30000
-    idleTimeoutMs: 600000
-    maxLifetimeMs: 1800000
-    maxPoolSize: 20
-    minIdle: 1
-    transactionTimeoutS: 30
-
-feign:
-   hystrix:
-     enabled: true
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: true
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
-ribbon:
-  ReadTimeout: 600000
-  ConnectTimeout: 600000
-  MaxAutoRetries: 0
-  MaxAutoRetriesNextServer: 1
-  eureka:
-    enabled: true
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:9999/eureka/
 #service name
 spring:
   devtools:
@@ -74,16 +36,8 @@ spring:
       max-wait: 600000
 ccb:
   isTrans: uuuu
-#page:
-#  defaultsize: 20
 yyc:
   sysId: ccbtest1
-#es:
-#  cluster_name: yonyou
-#  cluster_nodes: 39.104.87.29:9300
-#redis:
-#  poolUrl: direct://39.104.87.29:6379?poolSize=20&poolName=ccb&password=ccb&username=ccb
-
 ncbase:
   appid: ccb
   server: ccb
