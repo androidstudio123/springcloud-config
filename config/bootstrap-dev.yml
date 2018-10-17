@@ -41,4 +41,4 @@ es:
   cluster_name: yonyou
   cluster_nodes: 128.196.230.29:9300
 redis:
-  poolUrl: direct://128.196.230.31:6379?poolSize=20&poolName=jsyh&password=ccb_jsyh
+  poolUrl: direct://39.104.87.29:6379?poolSize=20&poolName=ccb&password=ccb&username=ccb
