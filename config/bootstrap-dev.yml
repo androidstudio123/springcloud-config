@@ -1,6 +1,6 @@
 db:
   mysql:
-    jdbcUrl: jdbc:mysql://128.196.230.29:3306/ccb?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    jdbcUrl: jdbc:mysql://39.104.87.29:3306/ccb?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true
     username: ccb
     password: ccb
     driverClassName: com.mysql.jdbc.Driver
