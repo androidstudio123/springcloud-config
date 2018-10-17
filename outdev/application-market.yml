@@ -24,8 +24,8 @@ spring:
     elasticsearch:
       cluster-name: yonyou
       cluster-nodes: 39.104.87.29:9300
-  session:
-    store-type: none
+ # session:
+ #   store-type: none
   redis:
     port: 33302
     host: 106.75.216.203
