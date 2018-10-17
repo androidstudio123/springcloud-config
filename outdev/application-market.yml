@@ -5,6 +5,21 @@ server:
       url: http://127.0.0.1:8888
       name: springCloudApp
       profile: ${config.profile:dev}
+#MYSQL
+db:
+  mysql:
+    jdbcUrl: jdbc:mysql://39.104.87.29:3306/ccb?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true
+    username: ccb
+    password: ccb
+    driverClassName: com.mysql.jdbc.Driver
+    connectionTestQuery: SELECT 1
+    connectionTimeoutMs: 30000
+    idleTimeoutMs: 600000
+    maxLifetimeMs: 1800000
+    maxPoolSize: 20
+    minIdle: 1
+    transactionTimeoutS: 30
+
 feign:
    hystrix:
      enabled: true
@@ -57,31 +72,17 @@ spring:
       max-active: 100
       max-idle: 5
       max-wait: 600000
-#MYSQL
-db:
-  mysql:
-    jdbcUrl: jdbc:mysql://39.104.87.29:3306/ccb?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true
-    username: ccb
-    password: ccb
-    driverClassName: com.mysql.jdbc.Driver
-    connectionTestQuery: SELECT 1
-    connectionTimeoutMs: 30000
-    idleTimeoutMs: 600000
-    maxLifetimeMs: 1800000
-    maxPoolSize: 20
-    minIdle: 1
-    transactionTimeoutS: 30
 ccb:
   isTrans: uuuu
-page:
-  defaultsize: 20
+#page:
+#  defaultsize: 20
 yyc:
   sysId: ccbtest1
-es:
-  cluster_name: yonyou
-  cluster_nodes: 39.104.87.29:9300
-redis:
-  poolUrl: direct://39.104.87.29:6379?poolSize=20&poolName=ccb&password=ccb&username=ccb
+#es:
+#  cluster_name: yonyou
+#  cluster_nodes: 39.104.87.29:9300
+#redis:
+#  poolUrl: direct://39.104.87.29:6379?poolSize=20&poolName=ccb&password=ccb&username=ccb
 
 ncbase:
   appid: ccb

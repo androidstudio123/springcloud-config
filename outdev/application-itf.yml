@@ -13,6 +13,19 @@ db:
         password: ccb
         transactionTimeoutS: 30
         username: ccb
+feign:
+   hystrix:
+     enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
 defaultBucket: uappr
 defaultBucketRead: uapread
 es:
@@ -27,10 +40,10 @@ eureka:
         lease-renewal-interval-in-seconds: 5.0
 fdfsread_server: 39.104.87.29
 network_timeout: 30
-page:
-    defaultsize: 20
-redis:
-    poolUrl: direct://39.104.87.29:6379?poolSize=20&poolName=ccb&password=ccb&username=ccb
+#page:
+#    defaultsize: 20
+#redis:
+#    poolUrl: direct://39.104.87.29:6379?poolSize=20&poolName=ccb&password=ccb&username=ccb
 server:
     port: 8520
 spring:
@@ -88,19 +101,6 @@ storeType: FastDfs
 tracker_server: 39.104.87.29:22122
 yyc:
     sysId: ccbtest1
-feign:
-   hystrix:
-     enabled: true
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: true
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
-
 #应用配置信息
 constant:
   product:
