@@ -45,19 +45,19 @@ spring:
     template-loader-path: classpath:/templates #设定ftl文件路径
   mvc:
     static-path-pattern: /static/** #设定静态文件路径，js,css等
-#  data:
-#mongodb:
-#      uri: mongodb://39.104.87.29:27017/gpc
-#  session:
-#    store-type: none
-#  redis:
-#    port: 33302
-#    host: 106.75.216.203
-#    password: ebs_stdv5_11
-#    pool:
-#       max-active: 100
-#       max-idle: 5
-#       max-wait: 600000
+  data:
+    mongodb:
+      uri: mongodb://39.104.87.29:27017/gpc
+  session:
+    store-type: none
+  redis:
+    port: 33302
+    host: 106.75.216.203
+    password: ebs_stdv5_11
+    pool:
+       max-active: 100
+       max-idle: 5
+       max-wait: 600000
 ccb:
   isTrans: uuu
 #page:
